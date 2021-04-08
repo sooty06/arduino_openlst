@@ -15,38 +15,32 @@
 #include "openLSTDriver.h"
 
 /*************************************************************************************************
- * PUBLIC CONSTANTS *
- *************************************************************************************************/
-
-#define OPENLST_BUFFER_SIZE_BYTES 100U
-
-/*************************************************************************************************
  * PUBLIC FUNCTIONS *
  *************************************************************************************************/
 
 /**
  * @brief Constructs the OpenLST class.
+ *
+ * @param[in] hwID *****
+ * @param[in] length *****
+ * @param[in] callsign *****
  */
-OpenLST::OpenLST(void)
+OpenLST::OpenLST(uint16_t hwID, uint8_t callsignLength, uint8_t* callsign)
 {
+    /* open the serial port */
+    Serial1.begin(115200);
 
+    /* store the hardware ID */
+    /* ***** */
+
+    /* set the callsign */
+    /* ***** */
 }
 
 /**
  * @brief Destructs the OpenLST class.
  */
 OpenLST::~OpenLST(void)
-{
-
-}
-
-/**
- * @brief *****
- *
- * @param[in] length *****
- * @param[in] callsign *****
- */
-void OpenLST::setCallsign(uint8_t length, uint8_t* callsign)
 {
 
 }
