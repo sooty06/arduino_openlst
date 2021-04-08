@@ -1,5 +1,5 @@
 /**
- * @file openLSTDriver.c
+ * @file openLSTDriver.cpp
  *
  * @brief *****
  */
@@ -9,6 +9,10 @@
  *************************************************************************************************/
 
 #include <stdint.h>
+
+#include <Arduino.h>
+
+#include "openLSTDriver.h"
 
 /*************************************************************************************************
  * PUBLIC CONSTANTS *
@@ -21,17 +25,17 @@
  *************************************************************************************************/
 
 /**
- * @brief Initialises the openLST driver.
+ * @brief Constructs the OpenLST class.
  */
-void openLSTDriver_init(void)
+OpenLST::OpenLST(void)
 {
 
 }
 
 /**
- * @brief Uninitialises the openLST driver.
+ * @brief Destructs the OpenLST class.
  */
-void openLSTDriver_uninit(void)
+OpenLST::~OpenLST(void)
 {
 
 }
@@ -42,7 +46,7 @@ void openLSTDriver_uninit(void)
  * @param[in] length *****
  * @param[in] callsign *****
  */
-void openLSTDriver_setCallsign(uint8_t length, uint8_t* callsign)
+void OpenLST::setCallsign(uint8_t length, uint8_t* callsign)
 {
 
 }
@@ -54,7 +58,7 @@ void openLSTDriver_setCallsign(uint8_t length, uint8_t* callsign)
  *
  * @return *****
  */
-uint8_t openLSTDriver_getRxBuffer(uint8_t rxBuffer[OPENLST_BUFFER_SIZE_BYTES])
+uint8_t OpenLST::getRxBuffer(uint8_t rxBuffer[OPENLST_BUFFER_SIZE_BYTES])
 {
 
 }
@@ -65,7 +69,7 @@ uint8_t openLSTDriver_getRxBuffer(uint8_t rxBuffer[OPENLST_BUFFER_SIZE_BYTES])
  * @param[in] length *****
  * @param[in] packet *****
  */
-void openLSTDriver__sendPacket(uint8_t length, uint8_t* packet)
+void OpenLST::sendPacket(uint8_t length, uint8_t* packet)
 {
 
 }

@@ -4,11 +4,16 @@
  * @brief Public interface for the openLST driver.
  */
 
+#ifndef OPENLST_DRIVER_H
+#define OPENLST_DRIVER_H
+
 /*************************************************************************************************
  * INCLUDES *
  *************************************************************************************************/
 
 #include <stdint.h>
+
+#include <Arduino.h>
 
 /*************************************************************************************************
  * PUBLIC CONSTANTS *
@@ -17,11 +22,15 @@
 #define OPENLST_BUFFER_SIZE_BYTES 100U
 
 /*************************************************************************************************
- * PUBLIC FUNCTIONS *
+ * CLASSES *
  *************************************************************************************************/
 
-void openLSTDriver_init(void);
-void openLSTDriver_uninit(void);
-void openLSTDriver_setCallsign(uint8_t length, uint8_t* callsign);
-uint8_t openLSTDriver_getRxBuffer(uint8_t rxBuffer[OPENLST_BUFFER_SIZE_BYTES]);
-void openLSTDriver__sendPacket(uint8_t length, uint8_t* packet);
+class OpenLST
+{
+    public:
+        void setCallsign(uint8_t length, uint8_t* callsign);
+        uint8_t getRxBuffer(uint8_t rxBuffer[OPENLST_BUFFER_SIZE_BYTES]);
+        void sendPacket(uint8_t length, uint8_t* packet);
+};
+
+#endif /* OPENLST_DRIVER_H */
