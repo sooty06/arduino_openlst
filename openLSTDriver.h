@@ -30,6 +30,10 @@ class OpenLST
     public:
         uint8_t getRxBuffer(uint8_t rxBuffer[OPENLST_BUFFER_SIZE_BYTES]);
         void sendPacket(uint8_t length, uint8_t* packet);
+    private:
+        uint16_t hardwareID;
+        uint8_t radioCallsignLength;
+        char* radioCallsign;
 };
 
 #endif /* OPENLST_DRIVER_H */
